@@ -1,0 +1,122 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(250, 253, 255);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.08);
+  z-index: 100000;
+
+  @media screen and (min-width: 576px) {
+    padding: 0 2rem;
+  }
+}
+
+.logo {
+  height: 3rem;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  position: sticky;
+}
+
+.logo-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.logo-btn:hover {
+  cursor: pointer;
+}
+
+.logo-icon {
+  display: block;
+  color: var(--primaryColor);
+  font-size: 2.5rem;
+  transition: 0.3s;
+}
+
+.logo-icon:hover {
+  color: #f2af29;
+  // font-size: 2.6rem;
+}
+
+.nav-links {
+  // letter-spacing: 0.1rem;
+  // font-size: 1.1rem;
+  list-style-type: none;
+  transition: 0.4s ease-out;
+  backface-visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+
+  @media screen and (min-width: 992px) {
+    height: auto;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .show-nav {
+    height: 225px;
+    text-align: center;
+  }
+}
+
+.nav-links a {
+  display: block;
+  // display: inline-block;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #333;
+  transition: var(--mainTransition);
+  font-weight: bold;
+  letter-spacing: var(--mainSpacing);
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f2af29;
+  transform: translateY(-1px);
+}
+
+.nav-social-links {
+  display: none;
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+    line-height: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-social-links a {
+    color: var(--primaryColor);
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: var(--mainTransition);
+  }
+
+  .nav-social-links a:hover {
+    color: #333;
+    transform: translateY(-5px);
+  }
+}
